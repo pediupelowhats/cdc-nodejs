@@ -50,8 +50,9 @@ var servidor =  net.createServer(function(cliente){
  });
 });
 
+var porta = process.env.PORT || 3000
 //configurando a porta a qual este servidor deve ficar escutando
-servidor.listen(8000);
+servidor.listen(porta);
 
 //imprimindo um aviso que o servidor está rodando
-console.log("Servidor TCP conectado em 127.0.0.1 porta 8000, aguardando conexões!!!");
+console.log("Servidor TCP conectado em 127.0.0.1 porta "+porta+", aguardando conexões!!!");
